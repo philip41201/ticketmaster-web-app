@@ -1,3 +1,3 @@
 export default function Title({ text }) {
-    return <h1>{text}</h1>;
+    return <center><h1>{text}</h1></center>
   }  

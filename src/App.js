@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import Title from "./Title.js";
 import Info from "./Info.js";
 import Entry from "./Entry.js";
+import Nav from "./Nav"
+import { SignIn, SignOut, useAuthentication } from "./services/authService"
 import "./App.css";
 
 export default function App() {
   const [name, setName] = useState("");
   const [data, setData] = useState([]);
+  const user = useAuthentication();
 
   function fetchData() {
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=g41Q8ILou71Xrbkop2xuNXrS5pBo53hv&keyword=${name}&countryCode=US`;
@@ -17,7 +20,12 @@ export default function App() {
         setData(data._embedded.events);
       });
   }
-
+  {/*
+  useEffect(() => {
+    if (user) {
+      fetchData().then(setData, [name])
+    }
+  }, [user])*/}
   useEffect(fetchData, [name]);
 
   return (
@@ -29,11 +37,6 @@ export default function App() {
         <Entry action={setName} />
         <Info name={name} data={data} />
       </section>
-      <footer>
-        <a href="https://codesandbox.io/s/weather-api-project-2-pe328k?file=/src/App.js">
-          Source Code
-        </a>
-      </footer>
     </div>
   );
 }

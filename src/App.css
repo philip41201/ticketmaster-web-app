@@ -10,12 +10,9 @@ body {
 }
 
 header {
-  font-size: 20pt;
+  background-color: black;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
 }
 
-header,
-footer {
-  grid-column: span 1;
-  padding: 0px;
-  margin: 0px;
-}
