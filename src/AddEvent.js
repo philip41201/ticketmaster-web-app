@@ -21,7 +21,7 @@ export default function AddEvent({ action }) {
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data._embedded.events);
+                console.log(data)
                 setData(data._embedded.events);
             addDoc(eventCollectionRef, {data}).then(data => {
                 console.log(data)

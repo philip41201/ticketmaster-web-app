@@ -16,3 +16,17 @@ header {
   text-align: center;
 }
 
+nav {
+  height: 100%;
+  padding: 10px;
+}
+
+nav {
+  background-color: #dee9ff;
+}
+
+nav p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+

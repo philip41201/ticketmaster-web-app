@@ -1,14 +1,24 @@
-export default function Nav({ events, setEvents }) {
+export default function Nav({ articles, setArticle }) {
     return (
       <nav>
-        {!events
-          ? "No events"
-          : events.map((event) => (
-              <p key={event.id} onClick={() => setEvent(event)}>
-                {event.id}
+        {!articles
+          ? "No articles"
+          : articles.map((a) => (
+              <p key={a.id} onClick={() => setArticle(a)}>
+                {a.data._embedded.events.map((event) =>
+                    <p>{event.name}</p>
+                )}
+                {a.data._embedded.events.map(event => (
+                    <div key={event.id}>
+                        {event._embedded.venues.map(venue => (
+                            <div key={venue.id}>
+                                <p>{venue.name}</p>
+                            </div>
+                    ))}
+                    </div>
+                ))}
               </p>
             ))}
       </nav>
     );
   }
-  
