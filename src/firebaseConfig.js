@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAzI2-sth77-3y-tiGYLDMxu3kYO7kUEsg",
-  authDomain: "ticketmaster-bcaa3.firebaseapp.com",
-  projectId: "ticketmaster-bcaa3",
-  storageBucket: "ticketmaster-bcaa3.appspot.com",
-  messagingSenderId: "369502488474",
-  appId: "1:369502488474:web:36570b38d73852d52f1c23"
+  apiKey: "AIzaSyCBEu4Rd86Im_K62XNiTQFPoupCn34vUZU",
+  authDomain: "ticketmaster-4f8d0.firebaseapp.com",
+  projectId: "ticketmaster-4f8d0",
+  storageBucket: "ticketmaster-4f8d0.appspot.com",
+  messagingSenderId: "837057836453",
+  appId: "1:837057836453:web:bc38765076d3ab2d1fe44c"
 };
 
 // Initialize Firebase

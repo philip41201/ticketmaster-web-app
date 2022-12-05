@@ -1,11 +1,11 @@
-export default function Nav({ events, setEvent }) {
+export default function Nav({ events, setEvents }) {
     return (
       <nav>
         {!events
           ? "No events"
-          : events.map((a) => (
-              <p key={a.id} onClick={() => setEvent(a)}>
-                {a.id}
+          : events.map((event) => (
+              <p key={event.id} onClick={() => setEvent(event)}>
+                {event.id}
               </p>
             ))}
       </nav>

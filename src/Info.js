@@ -8,8 +8,8 @@ export default function Info({ name, data }) {
           <tbody>
             <tr>
               <th>eventID</th>
-              <th>Name</th>
-              <th>Venue</th>
+              <th>name</th>
+              <th>venue</th>
               <th>eventDate</th>
               <th>onSaleDate</th>
             </tr>
