@@ -4,12 +4,37 @@ export default function Event({ event }) {
         {!event ? (
           <p>No event selected</p>
         ) : ( 
-            <tbody>
+            <table>
                 <tr>
                     <th>EventID</th>
+                    <th>Name</th>
+                    <th>Venue</th>
+                    <th>Location</th>
+                    <th>eventDate</th>
+                    <th>minPrice</th>
+                    <th>maxPrice</th>
+                </tr>
+                <tr>
                     {event.data._embedded.events.map((event) =>
                         <td>{event.id}</td>
                     )}
+                    {event.data._embedded.events.map((event) =>
+                        <td>{event.name}</td>
+                    )}
+                    {event.data._embedded.events.map(event => (
+                        <div>
+                            {event._embedded.venues.map(venue => (
+                                <td>{venue.name}</td>
+                        ))}
+                        </div>
+                    ))}
+                    {event.data._embedded.events.map(event => (
+                        <div>
+                            {event._embedded.venues.map(venue => (
+                                <td>{venue.city.name}, {venue.state.stateCode}</td>
+                            ))}
+                        </div>
+                    ))}
                 </tr>
             {/*
             <section>
@@ -54,7 +79,7 @@ export default function Event({ event }) {
                 )}
           </section>
                 */}
-          </tbody>
+          </table>
         )}
       </div>
     );
