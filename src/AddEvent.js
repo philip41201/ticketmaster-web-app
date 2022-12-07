@@ -31,7 +31,6 @@ export default function AddEvent({ action }) {
     return (
         <div>
             <form onSubmit={submit}>
-                <label htmlform="name">Event Name</label>
                 <input 
                     id='name' 
                     type="text" 
@@ -42,6 +41,7 @@ export default function AddEvent({ action }) {
                 />
                 <button type='submit'>Add Event</button>
             </form>
+            {/*
             <tbody>
                 <tr>
                     <th>eventID</th>
@@ -75,7 +75,7 @@ export default function AddEvent({ action }) {
                         ))}
                     </tr>
                 ))}
-            </tbody>
+            </tbody>*/}
         </div>
     )
 }

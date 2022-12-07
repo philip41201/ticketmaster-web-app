@@ -1,17 +1,25 @@
-export default function Article({ article }) {
+export default function Event({ event }) {
     return (
-      <article>
-        {!article ? (
-          <p>No article selected</p>
+        <div>
+        {!event ? (
+          <p>No event selected</p>
         ) : ( 
+            <tbody>
+                <tr>
+                    <th>EventID</th>
+                    {event.data._embedded.events.map((event) =>
+                        <td>{event.id}</td>
+                    )}
+                </tr>
+            {/*
             <section>
-                {article.data._embedded.events.map((event) =>
+                {event.data._embedded.events.map((event) =>
                     <p>{event.id}</p>
                 )}
-                {article.data._embedded.events.map((event) =>
+                {event.data._embedded.events.map((event) =>
                     <p>{event.name}</p>
                 )}
-                {article.data._embedded.events.map(event => (
+                {event.data._embedded.events.map(event => (
                     <div key={event.id}>
                         {event._embedded.venues.map(venue => (
                             <div key={venue.id}>
@@ -20,7 +28,7 @@ export default function Article({ article }) {
                     ))}
                     </div>
                 ))}
-                {article.data._embedded.events.map(event => (
+                {event.data._embedded.events.map(event => (
                     <div key={event.id}>
                         {event._embedded.venues.map(venue => (
                             <div key={venue.id}>
@@ -29,10 +37,10 @@ export default function Article({ article }) {
                     ))}
                     </div>
                 ))}
-                {article.data._embedded.events.map((event) =>
+                {event.data._embedded.events.map((event) =>
                     <p>{event.dates.start.localDate}</p>
                 )}
-                {article.data._embedded.events.map(event => (
+                {event.data._embedded.events.map(event => (
                     <div key={event.id}>
                         {event.priceRanges.map(venue => (
                             <div key={venue.id}>
@@ -41,12 +49,14 @@ export default function Article({ article }) {
                     ))}
                     </div>
                 ))}
-                {article.data._embedded.events.map((event) =>
+                {event.data._embedded.events.map((event) =>
                     <img src={event.seatmap.staticUrl} alt="" height={100} />
                 )}
           </section>
+                */}
+          </tbody>
         )}
-      </article>
+      </div>
     );
   }
 

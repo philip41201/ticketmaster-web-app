@@ -1,22 +1,19 @@
 import { useState, useEffect } from "react";
 import Title from "./Title.js";
-import Info from "./Info.js";
-import Entry from "./Entry.js";
-import List2 from "./List2.js";
 import "./App.css";
-import AddEvent from "./AddEvent.js";
+import AddEvent from "./addEvent.js";
 import Nav from "./Nav.js";
-import { fetchArticles } from "./articleService.js";
-import Article from "./Article.js";
+import { fetchEvents } from "./eventService.js";
+import Event from "./Event.js";
 
 export default function App() {
   const [name, setName] = useState("")
-  const [articles, setArticles] = useState([])
-  const [article, setArticle] = useState(null)
+  const [events, setEvents] = useState([])
+  const [event, setEvent] = useState(null)
 
   useEffect(() => {
     {
-      fetchArticles().then(setArticles)
+      fetchEvents().then(setEvents)
     }
   })
 
@@ -25,20 +22,22 @@ export default function App() {
       <header>
         <Title text="Ticketmaster Data" />
       </header>
-      <section id="test1">
-        <List2 />
-      </section>
-      <section id="test2">
+      <div>
+        <Nav events={events} setEvent={setEvent} />
+      </div>
+      <div id="info">
+        <Event event={event} />
+      </div>
+      <div id="search">
         <AddEvent action={setName}/>
-      </section>
-      <section>
-        <Nav articles={articles} setArticle={setArticle} />
-        <Article article={article} />
-      </section>
+      </div>
       {/*
       <section>
-        <Entry action={setName} />
-        <Info name={name} data={data} />
+        <Nav events={events} setEvent={setEvent} />
+        <Event event={event} />
+      </section>
+      <section id="test">
+        <AddEvent action={setName}/>
       </section>
       */}
     </div>
