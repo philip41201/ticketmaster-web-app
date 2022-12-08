@@ -3,19 +3,19 @@ import Title from "./Title.js";
 import "./App.css";
 import AddEvent from "./addEvent.js";
 import Nav from "./Nav.js";
-import { fetchEvents } from "./eventService.js";
+import { fetchEvents } from "./services/eventService.js";
 import Event from "./displayEvent.js";
 
 export default function App() {
-  const [name, setName] = useState("")
-  const [events, setEvents] = useState([])
-  const [event, setEvent] = useState(null)
+  const [name, setName] = useState("");
+  const [events, setEvents] = useState([]);
+  const [event, setEvent] = useState(null);
 
   useEffect(() => {
     {
-      fetchEvents().then(setEvents)
+      fetchEvents().then(setEvents);
     }
-  })
+  });
 
   return (
     <div className="App">
@@ -29,7 +29,7 @@ export default function App() {
         <Event event={event} />
       </div>
       <div id="search">
-        <AddEvent action={setName}/>
+        <AddEvent action={setName} />
       </div>
       {/*
       <section>
