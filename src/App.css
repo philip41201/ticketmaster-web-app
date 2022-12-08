@@ -29,10 +29,13 @@ nav {
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 500px;
   background-color: #ccc;
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: scroll;
+  font-size: 10pt;
+  white-space: nowrap;
 }
 
 nav p:hover {
@@ -43,12 +46,21 @@ nav p:hover {
 #info {
   position: fixed;
   top: 100px;
-  left: 33%;
+  left: 501px;
+  Color:black;
+  font-size:18px;
+  border: 3px solid black;
+}
+table {
+  border-collapse: collapse;
+}
+th, td {
+    border: 2px solid black;
+    padding: 15px;
 }
 
 #search {
   position: fixed;
   top: 60px;
-  left: 33%;
+  left: 501px;
 }
-

@@ -23,9 +23,14 @@ export default function AddEvent({ action }) {
             .then((data) => {
                 console.log(data)
                 setData(data._embedded.events);
+            data._embedded.events.map((event) =>
+                addDoc(eventCollectionRef, {event})
+            )
+            {/*}
             addDoc(eventCollectionRef, {data}).then(data => {
                 console.log(data)
             })
+            */}
         });
 }
     return (
