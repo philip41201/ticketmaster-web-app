@@ -4,7 +4,7 @@ import "./App.css";
 import AddEvent from "./addEvent.js";
 import Nav from "./Nav.js";
 import { fetchEvents } from "./eventService.js";
-import Event from "./Event.js";
+import Event from "./displayEvent.js";
 
 export default function App() {
   const [name, setName] = useState("")
