@@ -31,15 +31,6 @@ export default function App() {
       <div id="search">
         <AddEvent action={setName} />
       </div>
-      {/*
-      <section>
-        <Nav events={events} setEvent={setEvent} />
-        <Event event={event} />
-      </section>
-      <section id="test">
-        <AddEvent action={setName}/>
-      </section>
-      */}
     </div>
   );
 }
