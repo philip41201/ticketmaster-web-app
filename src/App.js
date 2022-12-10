@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Title from "./Title.js";
 import "./App.css";
-import AddEvent from "./addEvent.js";
+import AddEvent from "./AddEvent.js";
 import Nav from "./Nav.js";
 import { fetchEvents } from "./services/eventService.js";
 import Event from "./displayEvent.js";
