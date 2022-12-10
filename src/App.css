@@ -29,7 +29,7 @@ nav {
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 25%;
   background-color: #ccc;
   padding: 20px;
   box-sizing: border-box;
@@ -46,11 +46,18 @@ nav p:hover {
 #info {
   position: fixed;
   top: 100px;
-  left: 301px;
+  left: 25.1%;
   color: black;
   font-size: 16px;
   border: 3px solid black;
 }
+
+#search {
+  position: fixed;
+  top: 60px;
+  left: 25.1%;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -58,10 +65,4 @@ th,
 td {
   border: 2px solid black;
   padding: 15px;
-}
-
-#search {
-  position: fixed;
-  top: 60px;
-  left: 301px;
 }
