@@ -2,8 +2,49 @@ export default function Event({ event }) {
   return (
     <div>
       {!event ? (
-        <p>No event selected</p>
+        <h2>No event selected</h2>
       ) : (
+        <div>
+          <div>
+            <h1>{event.event.name}</h1>
+            <p> URL:
+              <a href={event.event.url} target="_blank">
+                {event.event.url}
+              </a>
+            </p>
+            {event.event._embedded.venues.map((venue) => (
+              <p>Venue: {venue.name}</p>
+            ))}
+            {event.event._embedded.venues.map((venue) => (
+              <p>
+                Location: {venue.city.name}, {venue.state.stateCode}
+              </p>
+            ))}
+            <p>Event Date: {event.event.dates.start.localDate}</p>
+            {event.event.priceRanges.map((price) => (
+              <p>
+                Price Range: ${price.min} - ${price.max}
+              </p>
+            ))}
+            <img
+              src={event.event.seatmap.staticUrl}
+              width="350"
+              height="350"
+            ></img>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+{/*
+{event.event.images.map((image, index) => 
+            <div key={index}>
+              <img src={image.url}></img>
+            </div>
+          )}
+*/}
+{/*
         <table cellspacing="15">
           <tr>
             <th>Name</th>
@@ -42,7 +83,4 @@ export default function Event({ event }) {
             </td>
           </tr>
         </table>
-      )}
-    </div>
-  );
-}
+        */}

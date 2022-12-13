@@ -45,46 +45,10 @@ export default function AddEvent({ action }) {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Please Enter an Event"
-          size="100"
+          placeholder="Please Enter an Event"          
         />
         <button type="submit">Add Event</button>
       </form>
-      {/*
-            <tbody>
-                <tr>
-                    <th>eventID</th>
-                    <th>name</th>
-                    <th>venue</th>
-                    <th>city</th>
-                    <th>state</th>
-                    <th>eventDate</th>
-                    <th>minPrice</th>
-                    <th>maxPrice</th>
-                </tr>
-                {data.map((event) => (
-                    <tr>
-                        <td>{event.id}</td>
-                        <td>{event.name}</td>
-                        {event._embedded.venues.map((venue) => (
-                            <td>{venue.name}</td>
-                        ))}
-                        {event._embedded.venues.map((venue) => (
-                            <td>{venue.city.name}</td>
-                        ))}
-                        {event._embedded.venues.map((venue) => (
-                            <td>{venue.state.name}</td>
-                        ))}
-                        <td>{event.dates.start.localDate}</td>
-                        {event.priceRanges.map((venue) => (
-                            <td>{venue.min}</td>
-                        ))}
-                        {event.priceRanges.map((venue) => (
-                            <td>{venue.max}</td>
-                        ))}
-                    </tr>
-                ))}
-            </tbody>*/}
     </div>
   );
 }

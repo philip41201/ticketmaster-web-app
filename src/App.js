@@ -20,16 +20,18 @@ export default function App() {
   return (
     <div className="App">
       <header id="title">
-        <Title text="Ticketmaster Data" />
+        <Title text="Ticketmaster Event Data" />
       </header>
-      <div>
+      <div class="nav">
         <Nav events={events} setEvent={setEvent} />
       </div>
-      <div id="info">
-        <Event event={event} />
-      </div>
-      <div id="search">
-        <AddEvent action={setName} />
+      <div class="info">
+        <div class="eventInfo">
+          <Event event={event} />
+        </div>
+        <div class="search">
+          <AddEvent action={setName} />
+        </div>
       </div>
     </div>
   );
