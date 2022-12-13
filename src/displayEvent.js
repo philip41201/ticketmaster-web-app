@@ -7,7 +7,7 @@ export default function Event({ event }) {
         <div>
           <div>
             <h1>{event.event.name}</h1>
-            <p> URL:
+            <p>URL:
               <a href={event.event.url} target="_blank">
                 {event.event.url}
               </a>

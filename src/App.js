@@ -6,6 +6,7 @@ import Nav from "./Nav.js";
 import { fetchEvents } from "./services/eventService.js";
 import Event from "./displayEvent.js";
 
+
 export default function App() {
   const [name, setName] = useState("");
   const [events, setEvents] = useState([]);

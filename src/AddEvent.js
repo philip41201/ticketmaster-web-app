@@ -15,9 +15,6 @@ export default function AddEvent({ action }) {
     action(content);
     setContent("");
 
-    {
-      /*const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=g41Q8ILou71Xrbkop2xuNXrS5pBo53hv&keyword=Lizzy+McAlpine+Dallas&countryCode=US`;*/
-    }
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=g41Q8ILou71Xrbkop2xuNXrS5pBo53hv&keyword=${name}&countryCode=US`;
     const eventCollectionRef = collection(db, "events");
     fetch(url)
@@ -28,13 +25,6 @@ export default function AddEvent({ action }) {
         data._embedded.events.map((event) =>
           addDoc(eventCollectionRef, { event })
         );
-        {
-          /*}
-            addDoc(eventCollectionRef, {data}).then(data => {
-                console.log(data)
-            })
-            */
-        }
       });
   }
   return (

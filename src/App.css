@@ -31,6 +31,7 @@ header {
   background-color: #1181B2;
   color: white;
   text-align: center;
+  overflow-y: scroll;
 }
 
 nav p:hover {
