@@ -1,4 +1,4 @@
-export default function Image({ event }) {
+export default function SeatMap({ event }) {
   return (
     <div>
       {!event ? (

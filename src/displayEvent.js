@@ -1,4 +1,4 @@
-export default function Event({ event }) {
+export default function DisplayEvent({ event }) {
   return (
     <div>
       {!event ? (

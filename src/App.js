@@ -3,10 +3,10 @@ import Title from "./Title.js";
 import "./App.css";
 import AddEvent from "./AddEvent.js";
 import Nav from "./Nav.js";
-import { fetchEvents } from "./services/eventService.js";
-import Event from "./displayEvent.js";
-import Image from "./image.js";
+import DisplayEvent from "./displayEvent.js";
+import SeatMap from "./image.js";
 import EventTitle from "./eventTitle.js";
+import { fetchEvents } from "./services/eventService.js";
 import { SignIn, SignOut, useAuthentication } from "./services/authService.js";
 
 export default function App() {
@@ -44,10 +44,10 @@ export default function App() {
           </div>
         </div>
         <div class="eventInfo">
-          <Event event={event} />
+          <DisplayEvent event={event} />
         </div>
         <div class="images">
-          <Image event={event} />
+          <SeatMap event={event} />
         </div>
       </div>
     </div>
