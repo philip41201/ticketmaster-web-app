@@ -16,7 +16,7 @@ header {
   grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: #252525;
+  background-color: #026cdf;
   color: white;
   text-align: center;
   display: flex;
@@ -28,7 +28,7 @@ header {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: span 2;
-  background-color: #026cdf;
+  background-color: #252525;
   color: white;
   text-align: center;
   overflow-y: scroll;
@@ -72,7 +72,7 @@ nav p:hover {
 .eventInfo {
   grid-column-start: 1;
   grid-row-start: 2;
-  color: #026cdf;
+  color: #252525;
   font-size: 24px;
   text-align: left;
   display: flex;
