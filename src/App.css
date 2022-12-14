@@ -16,7 +16,7 @@ header {
   grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: #212221;
+  background-color: #252525;
   color: white;
   text-align: center;
   display: flex;
@@ -28,7 +28,7 @@ header {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: span 2;
-  background-color: #1181B2;
+  background-color: #026cdf;
   color: white;
   text-align: center;
   overflow-y: scroll;
@@ -41,24 +41,49 @@ nav p:hover {
 
 .info {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 25%, 75%;
 }
 
-.eventInfo {
-  grid-row-start: 2;
-  color: #1181B2;
-  font-size: 20px;
-  text-align: center;
+.search {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.eventTitle {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
   display: flex;
   justify-content: center;
 }
 
-.search {
-  grid-row-start: 1;
+.both {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.eventInfo {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  color: #026cdf;
+  font-size: 24px;
+  text-align: left;
   display: flex;
-  justify-content: center;
-  margin: 10px;
+  justify-content: flex-end;
+  padding-top: 25px;
+}
+
+.images {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  padding-top: 25px;
 }
 
 button {

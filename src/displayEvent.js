@@ -6,12 +6,6 @@ export default function Event({ event }) {
       ) : (
         <div>
           <div>
-            <h1>{event.event.name}</h1>
-            <p>URL:
-              <a href={event.event.url} target="_blank">
-                {event.event.url}
-              </a>
-            </p>
             {event.event._embedded.venues.map((venue) => (
               <p>Venue: {venue.name}</p>
             ))}
@@ -26,11 +20,19 @@ export default function Event({ event }) {
                 Price Range: ${price.min} - ${price.max}
               </p>
             ))}
+            <p>Ticket Limit: {event.event.accessibility.ticketLimit}</p>
+            {/*
             <img
               src={event.event.seatmap.staticUrl}
-              width="350"
-              height="350"
+              width="625"
+              height="468.7"
             ></img>
+            <img 
+              src={event.event.images[1].url}
+              width="500"
+              height="333"
+            ></img>
+            */}
           </div>
         </div>
       )}
