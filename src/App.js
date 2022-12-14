@@ -7,25 +7,32 @@ import { fetchEvents } from "./services/eventService.js";
 import Event from "./displayEvent.js";
 import Image from "./image.js";
 import EventTitle from "./eventTitle.js";
+import { SignIn, SignOut, useAuthentication } from "./services/authService.js";
 
 export default function App() {
   const [name, setName] = useState("");
   const [events, setEvents] = useState([]);
   const [event, setEvent] = useState(null);
+  const user = useAuthentication()
 
   useEffect(() => {
-    {
+    if (user) {
       fetchEvents().then(setEvents);
     }
-  });
+  }, [user]);
 
   return (
     <div className="App">
-      <header id="title">
-        <Title text="Ticketmaster Event Data" />
+      <header>
+        <div class="title">
+          <Title text="Ticketmaster Event Data" />
+        </div>
+        <div class="sign">
+          {!user ? <SignIn /> : <SignOut />}
+        </div>
       </header>
       <div class="nav">
-        <Nav events={events} setEvent={setEvent} />
+        {!user ? "" :<Nav events={events} setEvent={setEvent} />}
       </div>
       <div class="info">
         <div class="both">

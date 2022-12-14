@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 60px 440px 440px;
+  grid-template-rows: 100px 440px 440px;
 }
 
 body {
@@ -19,8 +19,23 @@ header {
   background-color: #026cdf;
   color: white;
   text-align: center;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+}
+
+.title {
+  grid-column-start: 1;
+  grid-column-end: 1;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  align-items: center;
+}
+
+.sign {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: flex;
+  justify-content: center; 
   align-items: center;
 }
 
@@ -89,6 +104,9 @@ nav p:hover {
 button {
   background-color: #ddedf4;
   font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 100px;
+  height: 35px;
 }
 
 input {
@@ -98,3 +116,4 @@ input {
   padding-left: 10px;
   padding-right: 10px;
 }
+

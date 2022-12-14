@@ -2,7 +2,7 @@ export default function Event({ event }) {
   return (
     <div>
       {!event ? (
-        <h2>No event selected</h2>
+        <h2></h2>
       ) : (
         <div>
           <div>
