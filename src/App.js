@@ -19,7 +19,7 @@ export default function App() {
     if (user) {
       fetchEvents().then(setEvents);
     }
-  }, [user]);
+  });
 
   return (
     <div className="App">
