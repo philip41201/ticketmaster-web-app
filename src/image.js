@@ -1,17 +1,17 @@
 export default function Image({ event }) {
-    return (
+  return (
+    <div>
+      {!event ? (
+        <p></p>
+      ) : (
         <div>
-          {!event ? (
-            <p></p>
-          ) : (
-            <div>
-                <img
-                    src={event.event.seatmap.staticUrl}
-                    width="500"
-                    height="375"
-                ></img>
-            </div>
-          )}
+          <img
+            src={event.event.seatmap.staticUrl}
+            width="500"
+            height="375"
+          ></img>
         </div>
-      );
+      )}
+    </div>
+  );
 }

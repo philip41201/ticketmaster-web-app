@@ -35,7 +35,7 @@ export default function AddEvent({ action }) {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Please Enter an Event"          
+          placeholder="Please Enter an Event"
         />
         <button type="submit">Add Event</button>
       </form>

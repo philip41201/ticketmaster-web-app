@@ -1,7 +1,6 @@
 import { db } from "./firebaseConfig.js";
 import { deleteDoc, doc } from "firebase/firestore";
 export default function Nav({ events, setEvent }) {
-  
   const deleteEvent = async (id) => {
     const userDoc = doc(db, "events", id);
     await deleteDoc(userDoc);

@@ -7,7 +7,7 @@
   grid-template-rows: 60px 440px 440px;
 }
 
-body{
+body {
   background-color: white;
 }
 
@@ -87,7 +87,7 @@ nav p:hover {
 }
 
 button {
-  background-color: #DDEDF4;
+  background-color: #ddedf4;
   font-family: "Poppins", sans-serif;
 }
 

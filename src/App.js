@@ -8,7 +8,6 @@ import Event from "./displayEvent.js";
 import Image from "./image.js";
 import EventTitle from "./eventTitle.js";
 
-
 export default function App() {
   const [name, setName] = useState("");
   const [events, setEvents] = useState([]);
