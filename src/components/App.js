@@ -6,8 +6,8 @@ import Nav from "./Nav.js";
 import DisplayEvent from "./displayEvent.js";
 import SeatMap from "./image.js";
 import EventTitle from "./eventTitle.js";
-import { fetchEvents } from "./services/eventService.js";
-import { SignIn, SignOut, useAuthentication } from "./services/authService.js";
+import { fetchEvents } from "../services/eventService.js";
+import { SignIn, SignOut, useAuthentication } from "../services/authService.js";
 
 export default function App() {
   const [name, setName] = useState("");

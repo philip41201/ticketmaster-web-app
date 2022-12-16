@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "./firebaseConfig";
+import { db } from "../firebaseConfig";
 
 export default function AddEvent({ action }) {
   const [name, setName] = useState("");
